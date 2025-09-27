@@ -1,5 +1,5 @@
 -- Data Cleaning
-
+-- Data taken from layoffs.csv by AlexTheAnalyst on github
 SELECT *
 FROM layoffs;
 
