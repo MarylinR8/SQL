@@ -6,7 +6,7 @@ FROM layoffs;
 -- 1. Remove duplicates
 -- 2. Standardize the data
 -- 3. Null Values or blank values
--- 4. Remove any Columns; instances where you should and shouldn't do this
+-- 4. Remove any Columns
 
 CREATE TABLE layoffs_staging2
 LIKE layoffs;
@@ -24,7 +24,7 @@ PARTITION BY company, industry, total_laid_off, percentage_laid_off, `date`) AS 
 FROM layoffs_staging2;
 
 
--- CHecking for duplicates
+-- Checking for duplicates
 WITH duplicate_cte2 AS
 (
 	SELECT *,
